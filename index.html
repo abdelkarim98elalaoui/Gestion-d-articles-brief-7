@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet" />
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Gestion d'articles</title>
+  </head>
+  <body>
+    <section class="all">
+      <div class="container">
+        <h1></h1>
+        <form action="/">
+          <!-- name -->
+          <input id="nameInp" placeholder="Nom du produit" type="text" />
+          <p class="output" id="nameP"></p>
+          <!-- mark -->
+          <input id="markInp" placeholder="Mark du produit" type="text" />
+          <p class="output" id="markP"></p>
+          <!-- prix -->
+          <input id="prixInp" placeholder="prix du produit en $" type="text" />
+          <p class="output" id="prixP"></p>
+          <!-- date-->
+          <label for="date">date de production</label>
+          <input name="date" id="dateInp" type="date" />
+          <p class="output" id="dateP"></p>
+          <!-- type -->
+          <label>Saisir le type du produit</label>
+          <select name="type" id="types">
+            <option class="produit"></option>
+            <option class="produit">hygiène et toilette</option>
+            <option class="produit">soins esthétiques</option>
+            <option class="produit">produits solaires</option>
+            <option class="produit">beauté des mains et des pieds</option>
+            <option class="produit">produits de maquillage</option>
+            <option class="produit">entretien capillaires</option>
+            <option class="produit">parfums</option>
+          </select>
+          <p class="output" id="typeP"></p>
+          <!-- promotion -->
+          <label id="promoHead" for="/">promotion</label>
+          <div class="flex">
+            <div class="oui">
+              <label id="ouiLable" for="/">Oui</label>
+              <input
+                class="radioInp"
+                id="ouiInp"
+                value="oui"
+                name="promotion"
+                type="radio" />
+            </div>
+            <div class="non">
+              <label id="nonLable" for="/">Non</label>
+              <input
+                class="radioInp"
+                id="no"
+                value="non"
+                name="promotion"
+                type="radio" />
+            </div>
+          </div>
+          <p class="output" id="promoP"></p>
+          <div class="buttons">
+            <button id="btn">Ajouter</button>
+            <button id="edit">Modify</button>
+          </div>
+        </form>
+      </div>
+      <div class="cart">
+        <!-- <h3>Product Card</h3> -->
+        <table class="table">
+          <tbody id="tbody">
+            <tr id="first">
+              <th>Nom</th>
+              <th>Marque</th>
+              <th>Prix</th>
+              <th>Date De Production</th>
+              <th>Type</th>
+              <th>Promotion</th>
+              <th class="btns"></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
